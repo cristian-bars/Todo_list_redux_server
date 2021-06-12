@@ -1,0 +1,56 @@
+@import './mixins';
+
+body {
+	background: #057575;
+	color: #555;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	margin: 20px;
+    text-align: center;
+}
+
+.header {
+    padding: 20px 0;
+    
+    &__title {
+        color: #CEF0D4; 
+        font-family: 'Rouge Script', cursive; 
+        font-size: 70px; 
+        font-weight: normal; 
+        line-height: 48px; 
+        margin: 0 0 50px; 
+        text-align: center; 
+        text-shadow: 1px 1px 2px #082b34;
+    }
+}
+
+.container {
+    &__list {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    &__addInput {
+        margin-left: 20px;
+    }
+    
+    &__item, &__addTask {
+        padding: 10px 0;
+        color: #CEF0D4; 
+        font-family: 'Rouge Script', cursive; 
+    }
+    
+    &__delTaskButton, &__doneTaskButton, &__addButton {
+        @include common-buttons();
+    
+    }
+    
+    &__item-done::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f00c";
+        margin-right: 20px;
+        font-size: 30px;
+        color: #B1FD0B;
+    }
+}
